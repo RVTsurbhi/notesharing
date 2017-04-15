@@ -21,6 +21,68 @@
   </head>
   <body>
 
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">share your notes</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-md-7">
+
+                  <div class="form-group">
+                    <label for="fileName">file name</label>
+                    <input type="text" class="form-control" id="fileName">
+                  </div>
+                  <div class="form-group">
+                    <label for="description">description</label>
+                    <textarea class="form-control" id="description"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="subject">Select subject:</label>
+                    <select class="form-control" id="subject">
+                      <option value="arts">Arts</option>
+                      <option value="engineering">Engineering</option>
+                      <option value="science">Science</option>
+                      <option value="mathematics">Mathematics</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="documentType">Select Document Type:</label>
+                    <select class="form-control" id="documentType">
+                      <option value="Study Material">Study Material</option>
+                      <option value="Question Paper">Question Paper</option>
+                      <option value="Project Report">Project Report</<option>
+                    </select>
+                  </div>
+
+                </div>
+
+                <div class="col-md-5">
+                  <label for="notesFile">upload file</label>
+                  <input type="file" name="notesFile" id="notesFile">
+                </div>
+
+              </div>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" id="submitBtn">submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
     <nav class="navbar navbar-default newnavbar">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -36,34 +98,10 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <!-- <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul> -->
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="btn btn-success" id="successbtn">upload</a></li>
-            <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul> -->
+            <li><a href="#" class="btn btn-success" id="successbtn"  data-toggle="modal" data-target="#myModal">upload</a></li>
+
             </li>
           </ul>
 
@@ -94,11 +132,11 @@
         <div class="container">
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Latest</a></li>
-              <li><a href="#">Arts</a></li>
-              <li><a href="#">Engineering</a></li>
-              <li><a href="#">Science</a></li>
-              <li><a href="#">Maths</a></li>
+              <li class="active"><a href="#" id="latest">Latest</a></li>
+              <li><a href="#" id="arts">Arts</a></li>
+              <li><a href="#" id="engineering">Engineering</a></li>
+              <li><a href="#" id="science">Science</a></li>
+              <li><a href="#" id="maths">Maths</a></li>
 
             </ul>
 

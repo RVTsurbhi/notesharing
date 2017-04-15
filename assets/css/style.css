@@ -41,8 +41,19 @@ nav.bottomnav
   color:#000000;
 }
 
-.bottomnav .navbar-nav li a:hover
+.bottomnav .navbar-nav li a:hover,
+.bottomnav .navbar-nav li a:active,
+.bottomnav .navbar-nav li a:focus
+
 {
   color:#795548;
   background:#ddd;
+
 }
+
+/*.bottomnav .navbar-nav li a:active,
+.bottomnav .navbar-nav li a:focus
+{
+  /*color: #0e0223;*/
+  outline: 0;
+}*/
