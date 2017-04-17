@@ -3,10 +3,11 @@ $('document').ready(function(){
   var latestUrl = "http://acadprojects.com/py/notes/sharing/note";
   getNotes(latestUrl);
 
-  function getNotes(postUrl)
+  function getNotes(dataUrl)
   {
+      $("#loader").css('display','block');
     $.ajax({
-      url: postUrl,
+      url: dataUrl,
       type:"GET",
       success: function(result){
         console.log(result);
@@ -27,9 +28,6 @@ $('document').ready(function(){
          for (var i = 0; i<length; i++)
          {
           var noteObject = newNotes[i];
-
-
-
 
           var notesName = noteObject.doc_name;
           var description = noteObject.doc_description;
@@ -59,6 +57,8 @@ $('document').ready(function(){
 
 
         }
+
+        $("#loader").css('display','none');
 
       }});
   }
@@ -112,12 +112,45 @@ $('document').ready(function(){
 
 
     $("#submitBtn").on('click',function(){
+
       var docName = $("#fileName").val();
       var docDescription = $("#description").val();
       var subject = $("#subject").val();
       var documentType = $("#documentType").val();
 
       var myFile = $("input[type=file]")[0].files[0];
+
+      if(docName ==  undefined || docName =="")
+      {
+        alert("please fill Document Name");
+        return false;
+      }
+
+      if(docDescription ==  undefined || docDescription =="")
+      {
+        alert("please fill Document Description");
+        return false;
+      }
+
+      // if(subject ==  undefined || subject =="")
+      // {
+      //   alert("please select subject type");
+      //   return false;
+      // }
+      //
+      // if(documentType ==  undefined || documentType =="")
+      // {
+      //   alert("please select Document type");
+      //   return false;
+      // }
+
+      if(myFile ==  undefined || myFile =="")
+      {
+        alert("please file to upload");
+        return false;
+      }
+
+         $("#loader").css('diaplay', 'block');
 
       var formdata = new FormData();
 
@@ -137,6 +170,8 @@ $('document').ready(function(){
         success: function(result)
         {
           alert("submitted");
+
+          $("#loader").css('diaplay', 'none');
           location.reload();
         }
       });

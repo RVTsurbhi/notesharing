@@ -1,3 +1,15 @@
+html,body
+{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body
+{
+  overflow-x: hidden;
+}
 #successbtn
 {
   padding: 5px 15px;
@@ -49,11 +61,36 @@ nav.bottomnav
   color:#795548;
   background:#ddd;
 
-}
+
 
 /*.bottomnav .navbar-nav li a:active,
 .bottomnav .navbar-nav li a:focus
 {
   /*color: #0e0223;*/
   outline: 0;
-}*/
+}
+
+.overlay
+{
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  position: absolute;
+  background: gray;
+  z-index: 1053;
+
+}
+
+.loading
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: yellow;
+  z-index: 1060;
+}
+
+ #loader
+{
+  display:none;
+}
