@@ -4,11 +4,32 @@ html,body
   width: 100%;
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
 }
 
-body
+/*body
 {
   overflow-x: hidden;
+}*/
+
+
+@media (max-width:500px)
+{
+  #main-img h1
+  {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  #bottomnavbar .navbar-collapse
+  {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+   
+
 }
 #successbtn
 {
@@ -25,6 +46,22 @@ body
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#main h1
+{
+  font-size: 70px;
+  color: #fff;
+  font-family: 'Abril Fatface', cursive;
+  margin-top: 100px;
+}
+
+#main h2
+{
+  font-size: 30px;
+  color: rgba(255,255,255,.7);
+  font-weight: 100px;
+
 }
 
 nav.newnavbar
