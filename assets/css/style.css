@@ -13,8 +13,8 @@ html,body
 }*/
 
 
-@media (max-width:500px)
-{
+@media (max-width:500px){
+
   #main-img h1
   {
     font-size: 40px;
@@ -28,9 +28,9 @@ html,body
     padding-bottom: 0;
     overflow: visible !important;
   }
-   
 
 }
+
 #successbtn
 {
   padding: 5px 15px;
