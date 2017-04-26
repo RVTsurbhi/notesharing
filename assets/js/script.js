@@ -1,6 +1,6 @@
 $('document').ready(function(){
 
-  var latestUrl = "http://acadprojects.com/py/notes/sharing/note";
+  var latestUrl = "https://acadprojects.com/py/notes/sharing/note";
   getNotes(latestUrl);
 
   function getNotes(dataUrl)
@@ -70,7 +70,7 @@ $('document').ready(function(){
       $("#bottomnavbar ul li").removeClass('active');
       $(this).parent().addClass('active');
 
-      var url = "http://acadprojects.com/py/notes/sharing/note?category=arts";
+      var url = "https://acadprojects.com/py/notes/sharing/note?category=arts";
       getNotes(url);
     });
 
@@ -79,7 +79,7 @@ $('document').ready(function(){
       $("#bottomnavbar ul li").removeClass('active');
       $(this).parent().addClass('active');
 
-      var url = "http://acadprojects.com/py/notes/sharing/note?category=engineering";
+      var url = "https://acadprojects.com/py/notes/sharing/note?category=engineering";
       getNotes(url);
     });
 
@@ -96,7 +96,7 @@ $('document').ready(function(){
       $("#bottomnavbar ul li").removeClass('active');
       $(this).parent().addClass('active');
 
-      var url = "http://acadprojects.com/py/notes/sharing/note?category=mathematics";
+      var url = "https://acadprojects.com/py/notes/sharing/note?category=mathematics";
       getNotes(url);
     });
 
@@ -105,7 +105,7 @@ $('document').ready(function(){
       $("#bottomnavbar ul li").removeClass('active');
       $(this).parent().addClass('active');
 
-      var url = "http://acadprojects.com/py/notes/sharing/note";
+      var url = "https://acadprojects.com/py/notes/sharing/note";
       getNotes(url);
     });
 
@@ -162,7 +162,7 @@ $('document').ready(function(){
 
 
       $.ajax({
-        url:'http://acadprojects.com/py/notes/sharing/note',
+        url:'https://acadprojects.com/py/notes/sharing/note',
         data: formdata,
         type: 'POST',
         contentType: false,
